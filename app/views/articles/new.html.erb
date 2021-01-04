@@ -1,0 +1,10 @@
+<h1>Blog List</h1>
+	<% form_for :article, url: articles_path  do |articles| %>
+	<div>
+		<%= articles.label :Title %>
+		<%= articles.text_field :Title %>
+		<%= articles.label :Text %>
+		<%= articles.text_area :Text %><br>
+		<%= articles.submit%>
+	</div>
+<% end %>
