@@ -29,6 +29,7 @@ pre {
 		justify-content: center;
 		border-radius: 5px;
 		padding: 5px 0;
+		background-color: #0369a1;
 	}
 
 	.field label {
@@ -50,18 +51,27 @@ pre {
 		background-color: #0369a1;
 	}
 
+	.achor,
+	.delete {
+		margin: auto 0;
+	}
+
 	.delete {
 		background-color: red;
 	}
 
 a {
 	display: inline-block;
-	color: #000;
 	text-decoration: none;
+}
+
+ .sub, 
+ a {
+	background-color: #0c4a6e;
+	border-radius: 5px;
+	padding: 3px 8px;
+	border: none;
 	color: #fff!important;
-	background-color: #1e40af;
-	border-radius: 2px;
-	padding: 3px 5px;
  }
 
 a:visited {
@@ -74,12 +84,15 @@ a:hover {
 th {
   padding-bottom: 5px; }
 
-td {
-  padding: 0 5px 7px; }
-
 div.field,
 div.actions {
-  margin-bottom: 10px; }
+	margin-bottom: 10px; }
+	
+.text {
+	border-radius: 5px;
+	outline: none;
+	padding: 5px 2px;
+}
 
 #notice {
   color: green; }

@@ -11,5 +11,16 @@
   <%= @articles.Text %>
 </p>
 
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@articles) %></li>
+  <li><%= link_to "Destroy", article_path(@articles),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/comment' %>
+
+
 <%= link_to 'Edit', edit_article_path %> |
 <%= link_to 'Back', articles_path %>

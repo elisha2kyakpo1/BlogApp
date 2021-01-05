@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= form.label :Title %>
-    <%= form.text_field :Title %>
+    <%= form.text_field :Title, :class => 'text' %>
   </div>
 
   <div class="field">
     <%= form.label :Text %>
-    <%= form.text_field :Text %>
+    <%= form.text_field :Text, :class => 'text' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => 'sub' %>
   </div>
 <% end %>
