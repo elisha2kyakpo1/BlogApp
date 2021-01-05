@@ -10,13 +10,13 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
+    <% @article.each do |article| %>
       <tr>
         <td><%= article.Title %></td>
         <td><%= article.Text %></td>
         <td><%= link_to "Show", article %></td>
         <td><%= link_to "Edit", edit_article_path(article) %></td>
-        <td><%= link_to "Destroy", article, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td><%= link_to "Delete", article, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
