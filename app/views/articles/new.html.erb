@@ -1,10 +1,9 @@
-<h1>Blog List</h1>
-<%= form_for :articles, url: articles_path  do |articles| %>
-  <div>
-    <%= articles.label :Title %><br>
-    <%= articles.text_field :Title %><br>
-    <%= articles.label :Text %><br>
-    <%= articles.text_area :Text %><br>
-    <%= articles.submit 'Save' %>
-  </div>
-<% end %>
+<div class ="new">
+	<div>
+			<h1>New Article</h1>
+
+			<%= render 'form', article: @articles %>
+
+			<%= link_to 'Back', articles_path %>
+		</div>
+</div>

@@ -1,6 +1,15 @@
-<h2>Articles</h2>
-<p>Title</p>
-<p><%= @article.Title %></p>
 
-<p>Text</p>
-<p><%= @article.Text %></p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Articles:</strong>
+  <%= @articles.Title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @articles.Text %>
+</p>
+
+<%= link_to 'Edit', edit_article_path %> |
+<%= link_to 'Back', articles_path %>
