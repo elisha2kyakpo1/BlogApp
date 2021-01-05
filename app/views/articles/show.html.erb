@@ -11,16 +11,25 @@
   <%= @articles.Text %>
 </p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@articles) %></li>
-  <li><%= link_to "Destroy", article_path(@articles),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/comment' %>
-
 
 <%= link_to 'Edit', edit_article_path %> |
 <%= link_to 'Back', articles_path %>
+
+<h2>Read comment:</h2>
+<%= @articles.comments.each do |comment| %>
+	<p><%= comment.commenter %></p>
+	<p><%= comment.body %></p>
+<% end %>
+<p><strong>Comment:</strong></p>
+<%= form_for([@articles, @articles.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+
+	<p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+	<p><%= f.submit %></p>	
+<% end %>
