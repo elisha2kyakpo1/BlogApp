@@ -15,11 +15,13 @@
 <%= link_to 'Edit', edit_article_path %> |
 <%= link_to 'Back', articles_path %>
 
-<h2>Read comment:</h2>
-<%= @articles.comments.each do |comment| %>
-	<p><%= comment.commenter %></p>
+<hr>
+<h2>Read comments:</h2>
+<% @articles.comments.each do |comment| %>
+	<p><strong><%= comment.commenter %></strong></p>
 	<p><%= comment.body %></p>
 <% end %>
+<hr>
 <p><strong>Comment:</strong></p>
 <%= form_for([@articles, @articles.comments.build]) do |f| %>
   <p>

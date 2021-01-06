@@ -24,6 +24,14 @@ pre {
 		flex-direction: column;
 	}
 
+	.edit-div {
+		display: flex;
+		justify-content: center;
+		background-color: #06b6d4;
+		padding: 10px 0;
+		border-radius: 5px;
+	}
+
 	.new {
 		display: flex;
 		justify-content: center;
