@@ -1,3 +1,3 @@
 class Comment < ApplicationRecord
-  belongs_to :article, fereign_key: true
+  belongs_to :article
 end
