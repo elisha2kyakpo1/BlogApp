@@ -5,11 +5,11 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @articles = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def new
-    @articles = Article.new
+    @article = Article.new
   end
 
   def create
@@ -23,22 +23,22 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @articles = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def update
-    @articles = Article.find(params[:id])
+    @article = Article.find(params[:id])
 
     if @articles.update(article_params)
-      redirect_to @articles
+      redirect_to @article
     else
       render :edit
     end
   end
 
   def destroy
-    @articles = Article.find(params[:id])
-    @articles.destroy
+    @article = Article.find(params[:id])
+    @article.destroy
 
     redirect_to articles_path
   end
